@@ -8,7 +8,9 @@
     "build": "ncc build src/main.ts --minify",
     "test": "jest",
     "fmt": "prettier --write \"src/**/*.ts\" \"__tests__/**/*.ts\"",
-    "fmtcheck": "prettier --check \"src/**/*.ts\" \"__tests__/**/*.ts\""
+    "fmtcheck": "prettier --check \"src/**/*.ts\" \"__tests__/**/*.ts\"",
+    "prepare": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -26,7 +28,8 @@
     "@octokit/plugin-throttling": "^3.5.1",
     "glob": "^7.1.6",
     "mime": "^2.4.4",
-    "node-fetch": "^2.6.1"
+    "node-fetch": "^2.6.1",
+    "@snyk/protect": "latest"
   },
   "devDependencies": {
     "@types/glob": "^7.1.1",
@@ -41,5 +44,6 @@
     "ts-jest": "^24.2.0",
     "typescript": "^3.7.4",
     "typescript-formatter": "^7.2.2"
-  }
+  },
+  "snyk": true
 }
